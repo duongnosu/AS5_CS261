@@ -224,15 +224,18 @@ void hashMapPut(HashMap* map, const char* key, int value)
           //map->table[index]= newLink;
           if(map->table[index]==NULL){
                current = map->table[index];
-               current->next = newLink;
+               //current->next = newLink;
           }
           else{
+               current = map->table[index];
                map->table[index] = newLink;
-          }
-          while(current->next !=NULL){
-               current = current->next;
+               while(current->next !=NULL){
+                    current = current->next;
 
+               }
+               current->next = newLink;
           }
+
           map->size = map->size +1;
      }
 
