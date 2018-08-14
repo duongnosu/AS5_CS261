@@ -1,3 +1,8 @@
+/*********************************************************************
+** Program Filename: main.c
+** Author: Nhu Duong
+** Date: August 13, 2018
+*********************************************************************/
 #include "hashMap.h"
 #include <stdlib.h>
 #include <stdio.h>

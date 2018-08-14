@@ -1,8 +1,8 @@
 /*
 * CS 261 Data Structures
 * Assignment 5
-* Name:
-* Date:
+* Name: Nhu Duong
+* Date: August 13. 2018
 */
 
 #include "hashMap.h"
@@ -223,12 +223,12 @@ void hashMapPut(HashMap* map, const char* key, int value)
           HashLink *newLink = hashLinkNew(key, value, map->table[index]);
           //map->table[index]= newLink;
           if(map->table[index]==NULL){
-               current = map->table[index];
+               map->table[index] = newLink;
                //current->next = newLink;
           }
           else{
                current = map->table[index];
-               map->table[index] = newLink;
+               //map->table[index] = newLink;
                while(current->next !=NULL){
                     current = current->next;
 
